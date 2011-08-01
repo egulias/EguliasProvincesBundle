@@ -1,0 +1,5 @@
+*.swp
+vendor/
+app/cache
+app/logs
+app/config/parameters.ini
