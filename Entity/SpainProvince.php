@@ -80,6 +80,11 @@ class SpainProvince
         );
     }
 
+    public function getProvinces()
+    {
+        return $this->provinces;
+    }
+
     public function getName()
     {
       return $this->name;

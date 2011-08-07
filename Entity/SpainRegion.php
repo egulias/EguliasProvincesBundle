@@ -45,6 +45,11 @@ class SpainRegion
     }
 
 
+    public function getRegions()
+    {
+        return $this->regions;
+    }
+
     public function setProvince($province)
     {
         $this->province = $province;
