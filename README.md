@@ -21,6 +21,7 @@ Add to your `/deps` file :
 ```
   * Side note: if you want provinces and regions in the database, you will need  `doctrine-fixtures` 
     and `DoctrineFixturesBundle`
+    
     ```  
     [doctrine-fixtures]   
         git=http://github.com/doctrine/data-fixtures.git
