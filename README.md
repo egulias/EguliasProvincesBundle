@@ -19,15 +19,16 @@ Add to your `/deps` file :
     git=http://github.com/egulias/EguliasProvincesBundle.git
     target=/bundles/Egulias/ProvincesBundle
 ```
-  - Side note: if you want provinces and regions in the database, you will need  `doctrine-fixtures` and `DoctrineFixturesBundle`
-  ```  
-  [doctrine-fixtures]   
-      git=http://github.com/doctrine/data-fixtures.git
+  * Side note: if you want provinces and regions in the database, you will need  `doctrine-fixtures` 
+    and `DoctrineFixturesBundle`
+    ```  
+    [doctrine-fixtures]   
+        git=http://github.com/doctrine/data-fixtures.git
 
-  [DoctrineFixturesBundle]
-      git=http://github.com/symfony/DoctrineFixturesBundle.git
-      target=/bundles/Symfony/Bundle/DoctrineFixturesBundle 
-  ```
+    [DoctrineFixturesBundle]
+        git=http://github.com/symfony/DoctrineFixturesBundle.git
+        target=/bundles/Symfony/Bundle/DoctrineFixturesBundle 
+    ```
         
 And make a `php bin/vendors install`.
 
@@ -42,7 +43,7 @@ And make a `php bin/vendors install`.
       // your other namespaces
       ));
 ```
-  - Installation note for Database fixtures:
+  * Installation note for Database fixtures:
     Also add this to registerNamespaces
 
     ``` 'Doctrine\\Common\\DataFixtures' => __DIR__.'/../vendor/doctrine-fixtures/lib',
