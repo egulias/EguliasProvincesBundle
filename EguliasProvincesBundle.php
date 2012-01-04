@@ -1,6 +1,6 @@
 <?php
 
-namespace Egulias\EguliasProvincesBundle;
+namespace Egulias\ProvincesBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

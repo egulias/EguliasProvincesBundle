@@ -1,6 +1,6 @@
 <?php
 
-namespace Egulias\EguliasProvincesBundle\DependencyInjection;
+namespace Egulias\ProvincesBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

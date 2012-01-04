@@ -1,6 +1,6 @@
 <?php
 
-namespace Egulias\EguliasProvincesBundle\DependencyInjection;
+namespace Egulias\ProvincesBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
