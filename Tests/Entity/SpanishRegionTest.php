@@ -3,12 +3,11 @@
 namespace Egulias\ProvincesBundle\Tests\Entity;
 
 use
-    Symfony\Bundle\FrameworkBundle\Test\WebTestCase,
     Egulias\ProvincesBundle\Entity\SpainRegion
 
 ;
 
-class SpanishRegionTest extends WebTestCase
+class SpanishRegionTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
