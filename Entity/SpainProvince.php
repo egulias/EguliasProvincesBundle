@@ -1,9 +1,9 @@
 <?php
 
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\EguliasProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Entity;
 
-use Egulias\EguliasProvincesBundle\Entity\SpainRegion;
+use Egulias\ProvincesBundle\Entity\SpainRegion;
 
 /**
  *

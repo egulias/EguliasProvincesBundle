@@ -1,11 +1,11 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\EguliasProvincesBundle\Tests\Entity;
+namespace Egulias\ProvincesBundle\Tests\Entity;
 
 use
     Symfony\Bundle\FrameworkBundle\Test\WebTestCase,
-    Egulias\EguliasProvincesBundle\Entity\SpainRegion,
-    Egulias\EguliasProvincesBundle\Entity\SpainProvince
+    Egulias\ProvincesBundle\Entity\SpainRegion,
+    Egulias\ProvincesBundle\Entity\SpainProvince
 
 ;
 

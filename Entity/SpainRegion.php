@@ -1,6 +1,6 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\EguliasProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Entity;
 
 /**
  *
@@ -75,20 +75,20 @@ class SpainRegion
     {
         $validKey = NULL;
         //Lets find the region ID
-        if(!is_null($this->id))return $this->id;
+        if (!is_null($this->id))return $this->id;
 
         //If it hasn't been defined, we search by province
         $prov = $this->getProvince();
 
-        foreach($this->regions as $key => $re) {
-            if(array_search($prov, $re[0]) !== FALSE) {
+        foreach ($this->regions as $key => $re) {
+            if (array_search($prov, $re[0]) !== FALSE) {
                 $validKey = $key;
                 break;
             }
         }
 
         //We throw an exception if no valid key was found
-        if(is_null($validKey)) {
+        if (is_null($validKey)) {
             $e = new \Exception('No Valid Province or Region ID setted');
             throw $e;
         }
@@ -106,7 +106,7 @@ class SpainRegion
      */
     public function setRegionId($id)
     {
-        if(array_key_exists($id, $this->regions)) {
+        if (array_key_exists($id, $this->regions)) {
             $this->id = $id;
         }
         else {
