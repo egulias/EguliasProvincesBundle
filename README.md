@@ -3,6 +3,9 @@
 This bundle is intended to allow you to easily have the basic structure of regions-provinces of a given country (or all,
 I hope).
 
+[![Build
+Status](https://secure.travis-ci.org/egulias/EguliasProvincesBundle.png)](http://travis-ci.org/egulias/EguliasProvincesBundle)
+
 ## TODO list
   * Use of Ordered data fixtures
   * Add another zoom level (Is needed?)
