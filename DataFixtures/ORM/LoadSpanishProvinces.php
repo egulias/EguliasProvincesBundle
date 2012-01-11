@@ -1,12 +1,12 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\EguliasProvincesBundle\DataFixtures\ORM;
+namespace Egulias\ProvincesBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
-use Egulias\EguliasProvincesBundle\Entity\SpainRegion;
-use Egulias\EguliasProvincesBundle\Entity\SpainProvince;
-use Egulias\EguliasProvincesBundle\Entity\Province;
-use Egulias\EguliasProvincesBundle\Entity\Region;
+use Egulias\ProvincesBundle\Entity\SpainRegion;
+use Egulias\ProvincesBundle\Entity\SpainProvince;
+use Egulias\ProvincesBundle\Entity\Province;
+use Egulias\ProvincesBundle\Entity\Region;
 
 class LoadSpanishProvinces implements FixtureInterface
 {
@@ -15,9 +15,9 @@ class LoadSpanishProvinces implements FixtureInterface
         $sp = new SpainProvince();
         $provinces = $sp->getProvinces();
 
-        foreach($provinces as $id => $r) {
+        foreach ($provinces as $id => $r) {
             $sp->setId($id);
-            $region = $manager->getRepository('EguliasProvincesBundle:Region')
+            $region = $manager->getRepository('ProvincesBundle:Region')
                         ->findOneBy(array('id' => $sp->getRegionId()));
 
             $province = new Province();
