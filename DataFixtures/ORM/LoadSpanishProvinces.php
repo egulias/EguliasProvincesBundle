@@ -3,10 +3,8 @@
 namespace Egulias\ProvincesBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
-use Egulias\ProvincesBundle\Entity\SpainRegion;
 use Egulias\ProvincesBundle\Entity\SpainProvince;
 use Egulias\ProvincesBundle\Entity\Province;
-use Egulias\ProvincesBundle\Entity\Region;
 
 class LoadSpanishProvinces implements FixtureInterface
 {
@@ -17,7 +15,7 @@ class LoadSpanishProvinces implements FixtureInterface
 
         foreach ($provinces as $id => $r) {
             $sp->setId($id);
-            $region = $manager->getRepository('ProvincesBundle:Region')
+            $region = $manager->getRepository('EguliasProvincesBundle:Region')
                         ->findOneBy(array('id' => $sp->getRegionId()));
 
             $province = new Province();

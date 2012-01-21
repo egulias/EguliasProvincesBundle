@@ -1,7 +1,7 @@
 <?php
 
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\EguliasProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
