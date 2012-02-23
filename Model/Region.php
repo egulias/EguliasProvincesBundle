@@ -1,7 +1,7 @@
 <?php
 
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\ProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -9,11 +9,10 @@ use Doctrine\ORM\Mapping as ORM;
  * Class to map spanish regions to their respectives provinces
  * This class does not have persistence
  *
+ * @package EguliasProvincesBundle
  * @author Eduardo Gulias Davis
- * @ORM\Table(name="region")
- * @ORM\Entity
  */
-class Region
+abstract class Region
 {
 
     /**

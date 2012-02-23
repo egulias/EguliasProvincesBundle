@@ -1,27 +1,15 @@
 <?php
 
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\ProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Egulias\ProvinceBundle
- *
- * @ORM\Table(name="province")
- * @ORM\Entity
  */
-class Province
+abstract class Province
 {
-    /**
-     * @var integer $id
-     *
-     * @ORM\Id
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
     /**
      * @var string $name
      *
@@ -66,7 +54,7 @@ class Province
     }
 
 
-    public function setRegion($region)
+    public function setRegion(Region $region)
     {
         $this->region = $region;
     }

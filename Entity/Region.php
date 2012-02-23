@@ -4,6 +4,7 @@
 namespace Egulias\ProvincesBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Egulias\ProvincesBundle\Model\Region as BaseRegion;
 
 /**
  * Class to map spanish regions to their respectives provinces
@@ -13,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="region")
  * @ORM\Entity
  */
-class Region
+class Region extends BaseRegion
 {
 
     /**
@@ -25,41 +26,4 @@ class Region
      */
     private $id;
 
-    /**
-     * @var string $name
-     *
-     * @ORM\Column(name="name", type="string", length=255, nullable=true)
-     */
-    private $name;
-
-    /**
-     *@var object $provinces
-     *
-     *@ORM\OneToMany(targetEntity="Province" mappedBy="region")
-     */
-
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function getProvinces()
-    {
-        return $this->provines;
-    }
 }
