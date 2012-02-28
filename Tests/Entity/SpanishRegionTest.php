@@ -2,10 +2,8 @@
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
 namespace Egulias\ProvincesBundle\Tests\Entity;
 
-use
-    Egulias\ProvincesBundle\Entity\SpainRegion
-
-;
+use Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainRegion;
+use Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainProvince;
 
 class SpanishRegionTest extends \PHPUnit_Framework_TestCase
 {
@@ -27,7 +25,9 @@ class SpanishRegionTest extends \PHPUnit_Framework_TestCase
     {
         $re = new SpainRegion();
         //Set Province as Cordoba
-        $re->setProvince(14);
+        $spProvince = new SpainProvince();
+        $spProvince->setId(14);
+        $re->setProvince($spProvince);
         //Testing for Province id 14 (Cordoba) to give back RegionId 1 (Andalucia)
         $this->assertEquals(1, $re->getId());
     }
@@ -51,7 +51,9 @@ class SpanishRegionTest extends \PHPUnit_Framework_TestCase
     {
         $re = new SpainRegion();
         //Set Province to Cordoba
-        $re->setProvince(14);
+        $spProvince = new SpainProvince();
+        $spProvince->setId(14);
+        $re->setProvince($spProvince);
         //Testing for Province id 11 (Cadiz) to be inside provinces array
         $this->assertContains(11, $re->getProvinces());
 

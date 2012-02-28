@@ -1,9 +1,8 @@
 <?php
 
-/* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\ProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Model\DataFixtures\ORM;
 
-use Egulias\ProvincesBundle\Entity\SpainRegion;
+use Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainRegion;
 
 /**
  *
@@ -80,16 +79,34 @@ class SpainProvince
         );
     }
 
+    /**
+     * getProvinces
+     *
+     * @access public
+     * @return array
+     */
     public function getProvinces()
     {
         return $this->provinces;
     }
 
+    /**
+     * getName
+     *
+     * @access public
+     * @return string
+     */
     public function getName()
     {
       return $this->name;
     }
 
+    /**
+     * getId
+     *
+     * @access public
+     * @return int
+     */
     public function getId()
     {
       return $this->id;
@@ -105,6 +122,13 @@ class SpainProvince
         $this->name = $name;
     }
 
+    /**
+     * setId
+     *
+     * @param int $id
+     * @access public
+     * @return void
+     */
     public function setId($id)
     {
         $this->id = $id;
@@ -116,7 +140,7 @@ class SpainProvince
     public function getRegionId()
     {
         $re = new SpainRegion();
-        $re->setProvince($this->getId());
+        $re->setProvince($this);
         return $re->getId();
     }
 }

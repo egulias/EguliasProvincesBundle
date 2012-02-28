@@ -3,8 +3,8 @@
 namespace Egulias\ProvincesBundle\Tests\Entity;
 
 use
-    Egulias\ProvincesBundle\Entity\SpainRegion,
-    Egulias\ProvincesBundle\Entity\SpainProvince
+    Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainRegion,
+    Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainProvince
 
 ;
 

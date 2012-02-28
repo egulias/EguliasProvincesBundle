@@ -1,10 +1,15 @@
 <?php
-/* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\ProvincesBundle\Entity;
+namespace Egulias\ProvincesBundle\Model\DataFixtures\ORM;
+
+use Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainProvince;
 
 /**
+ * SpainRegion
  *
- **/
+ * @package ProvincesBundle
+ * @subpackage Model
+ * @author Eduardo Gulias Davis <me@egulias.com>
+ */
 class SpainRegion
 {
 
@@ -12,7 +17,19 @@ class SpainRegion
      * @var array $regions
      */
     protected $regions;
+    /**
+     * id
+     *
+     * @var int
+     * @access protected
+     */
     protected $id = NULL;
+    /**
+     * province
+     *
+     * @var Egulias\ProvincesBundle\Model\DataFixtures\ORM\SpainProvince
+     * @access protected
+     */
     protected $province;
 
 
@@ -45,16 +62,35 @@ class SpainRegion
     }
 
 
+    /**
+     * getRegions
+     *
+     * @access public
+     * @return region
+     */
     public function getRegions()
     {
         return $this->regions;
     }
 
-    public function setProvince($province)
+    /**
+     * setProvince
+     *
+     * @param mixed $province
+     * @access public
+     * @return void
+     */
+    public function setProvince(SpainProvince $province)
     {
         $this->province = $province;
     }
 
+    /**
+     * getProvince
+     *
+     * @access public
+     * @return void
+     */
     public function getProvince()
     {
         return $this->province;
@@ -64,6 +100,7 @@ class SpainRegion
     {
         return $this->regions[$this->getId()]['name'];
     }
+
     /**
      * Finds the ID via Province or sel id
      *
@@ -78,7 +115,7 @@ class SpainRegion
         if (!is_null($this->id))return $this->id;
 
         //If it hasn't been defined, we search by province
-        $prov = $this->getProvince();
+        $prov = $this->getProvince()->getId();
 
         foreach ($this->regions as $key => $re) {
             if (array_search($prov, $re[0]) !== FALSE) {
@@ -117,7 +154,9 @@ class SpainRegion
 
     public function getProvinces()
     {
-        return $this->regions[$this->getId()][0];
+        if ($this->province instanceOf SpainProvince)$provinces = $this->province->getProvinces();
+        else $provinces = $this->regions[$this->getId()][0];
+        return $provinces;
     }
 
 }
