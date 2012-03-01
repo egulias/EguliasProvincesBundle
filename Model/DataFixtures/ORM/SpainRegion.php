@@ -154,9 +154,7 @@ class SpainRegion
 
     public function getProvinces()
     {
-        if ($this->province instanceOf SpainProvince)$provinces = $this->province->getProvinces();
-        else $provinces = $this->regions[$this->getId()][0];
-        return $provinces;
+        return $this->regions[$this->getId()][0];
     }
 
 }
