@@ -6,11 +6,6 @@ I hope).
 [![Build
 Status](https://secure.travis-ci.org/egulias/EguliasProvincesBundle.png)](http://travis-ci.org/egulias/EguliasProvincesBundle)
 
-## TODO list
-  * Use of Ordered data fixtures
-  * Add another zoom level (Is needed?)
-  * Your suggestions!
-
 ## Installation and configuration:
 
 ### Get the bundle
@@ -81,6 +76,7 @@ And make a `php bin/vendors install`.
     provided methods.
 
   * With Database
+  Features have been removed, but will be available soon
     - First you'll need to do a `app/console doctrine:schema:update --force` (or `--dump-sql` first to see the sql to be
         executed) to generate the db tables.
     - Secondly you'll need to dump data with
