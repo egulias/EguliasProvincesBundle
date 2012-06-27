@@ -1,6 +1,6 @@
 <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4: */
-namespace Egulias\ProvincesBundle\DataFixtures\ORM;
+namespace Egulias\ProvincesBundle\Model\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Egulias\ProvincesBundle\Entity\SpainProvince;
