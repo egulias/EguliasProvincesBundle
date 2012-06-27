@@ -1,7 +1,7 @@
 {
    "name":         "egulias/egulias-provinces-bundle",
    "description":  "Bundle for provinces",
-   "homepage":     "http://git.ideup.com/egulias/EguliasProvincesBundle.git",
+   "homepage":     "http://github.com/egulias/EguliasProvincesBundle.git",
    "type":         "symfony-bundle",
    "license":      "MIT",
    "authors":      [
@@ -16,9 +16,9 @@
 
       },
    "autoload":     {
-          "psr-0": { "Egulias\\EguliasProvincesBundle": "" }
+          "psr-0": { "Egulias\\ProvincesBundle": "" }
       },
-   "target-dir": "Egulias/EguliasProvincesBundle"
+   "target-dir": "Egulias/ProvincesBundle"
 }
 
 
